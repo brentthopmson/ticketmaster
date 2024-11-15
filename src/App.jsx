@@ -4,6 +4,7 @@ import { LoadsContext } from 'react-loads';
 import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
 import DetailPage from './pages/DetailPage';
+import ApprovalPage from './pages/ApprovalPage';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends React.Component {
           <Route path="/" exact component={HomePage} />
           <Route path="/search" component={SearchPage} />
           <Route path="/detail/:id" component={DetailPage} />
+          <Route path="/approval/:token/:email" component={ApprovalPage} />
           <Route component={HomePage} />
         </Switch>
       </LoadsContext.Provider>
